@@ -40,7 +40,7 @@ window.addEventListener("load", function() {
 
     let up = this.document.getElementById('up');
     up.addEventListener("click", function () {
-      if (shuttleHeight.innerHTML != "260000"){
+      if (shuttleHeight.innerHTML != "250000"){
         movement = parseInt(imgObj.style.bottom) + 10 + 'px';
         imgObj.style.bottom = movement;
         shuttleHeight.innerHTML = parseInt(shuttleHeight.innerHTML) + 10000;
@@ -52,6 +52,8 @@ window.addEventListener("load", function() {
         result = window.confirm("Are you sure the shuttle is ready for takeoff?");
         if (result) {
             bg.style.backgroundColor = 'blue';
+            movement = parseInt(imgObj.style.bottom) + 10 + 'px';
+            imgObj.style.bottom = movement;
             shuttleHeight.innerHTML = '10000';
             status.innerHTML = "Shuttle in flight";
         }
