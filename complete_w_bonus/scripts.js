@@ -8,11 +8,14 @@ window.addEventListener("load", function() {
     imgObj.style.bottom = '0px';
     let status = document.getElementById('flightStatus');
     let shuttleHeight = document.getElementById('spaceShuttleHeight');
+    // bonus
     let shuttleWidth = document.getElementById('spaceShuttleWidth');
+    //
     let bg = document.getElementById('shuttleBackground');
 
     let right = this.document.getElementById('right');
     right.addEventListener("click", function () {
+      // if statement is bonus
       if (shuttleWidth.innerHTML != "510000"){
         movement = parseInt(imgObj.style.left) + 10 + 'px';
         imgObj.style.left = movement;
@@ -22,6 +25,7 @@ window.addEventListener("load", function() {
 
     let left = this.document.getElementById('left');
     left.addEventListener("click", function () {
+      // if statement is bonus
       if (shuttleWidth.innerHTML != "-20000"){
         movement = parseInt(imgObj.style.left) - 10 +'px';
         imgObj.style.left = movement;
@@ -31,6 +35,7 @@ window.addEventListener("load", function() {
 
     let down = this.document.getElementById('down');
     down.addEventListener("click", function () {
+      // if statement is bonus
       if (shuttleHeight.innerHTML != "0"){
         movement = parseInt(imgObj.style.bottom) - 10 + 'px';
         imgObj.style.bottom = movement;
@@ -40,6 +45,7 @@ window.addEventListener("load", function() {
 
     let up = this.document.getElementById('up');
     up.addEventListener("click", function () {
+      // if statment is bonus
       if (shuttleHeight.innerHTML != "250000"){
         movement = parseInt(imgObj.style.bottom) + 10 + 'px';
         imgObj.style.bottom = movement;
@@ -52,8 +58,10 @@ window.addEventListener("load", function() {
         result = window.confirm("Are you sure the shuttle is ready for takeoff?");
         if (result) {
             bg.style.backgroundColor = 'blue';
+            // bonus
             movement = parseInt(imgObj.style.bottom) + 10 + 'px';
             imgObj.style.bottom = movement;
+            //
             shuttleHeight.innerHTML = '10000';
             status.innerHTML = "Shuttle in flight";
         }
