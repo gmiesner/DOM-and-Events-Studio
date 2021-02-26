@@ -62,8 +62,10 @@ window.addEventListener("load", function() {
         bg.style.backgroundColor = 'green';
         window.alert('The shuttle is landing. Landing gear engaged.');
         shuttleHeight.innerHTML = '0';
+        shuttleWidth.innerHTML = '0';
         status.innerHTML = "Shuttle landed";
         imgObj.style.bottom = '0px';
+        imgObj.style.left = '0px';
     });
 
     let missionAbort = this.document.getElementById('missionAbort');
@@ -72,8 +74,10 @@ window.addEventListener("load", function() {
         if (result) {
             bg.style.backgroundColor = 'green';
             shuttleHeight.innerHTML = '0';
+            shuttleWidth.innerHTML = '0';
             status.innerHTML = "Mission aborted";
             imgObj.style.bottom = '0px';
+            imgObj.style.left = '0px';
         }
     });
 
